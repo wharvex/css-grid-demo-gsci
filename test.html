@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Global Supply Chain Infrastructure Homepage</title>
     <link rel="stylesheet" href="./test.css">
 </head>
@@ -28,6 +29,31 @@
             <p>&copy; 2024 Global Supply Chain Infrastructure. All rights reserved.</p>
         </footer>
     </main>
+
+    <script>
+      (function() {
+        const root = document.documentElement;
+        function applyZoomClass() {
+          const dpr = window.devicePixelRatio || 1;
+          const rounded = Math.round(dpr);
+          root.classList.remove('zoom-2','zoom-3','zoom-4');
+          if (rounded >= 4) root.classList.add('zoom-4');
+          else if (rounded === 3) root.classList.add('zoom-3');
+          else if (rounded === 2) root.classList.add('zoom-2');
+          if (window.innerWidth <= 640 || rounded >= 3) root.classList.add('reduced-layout');
+          else root.classList.remove('reduced-layout');
+        }
+        applyZoomClass();
+        let lastDpr = window.devicePixelRatio;
+        window.addEventListener('resize', applyZoomClass);
+        setInterval(function() {
+          if (window.devicePixelRatio !== lastDpr) {
+            lastDpr = window.devicePixelRatio;
+            applyZoomClass();
+          }
+        }, 500);
+      })();
+    </script>
 </body>
 
 </html>
