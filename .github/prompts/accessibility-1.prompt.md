@@ -9,12 +9,27 @@ description: Responsive layout prompt for accessibility
 
 Expect a single HTML file and a single CSS file. If these are not provided, ask for them.
 
-## Instructions
+## Task
 
-I need this page to reflow and still provide a good user experience after zooming in to 400%.
+Allow this page to responsively "reflow" and still provide a good user experience as the user zooms in.
 
-At 400% zoom, the page needs to be organized in a single column layout, with the sidebar collapsed into a hamburger menu. The main content should be easily readable and navigable without horizontal scrolling.
+### Task Guidelines
 
-However, I also need to fully understand the changes that are made to make this happen.
+The user should never need to horizontally scroll to view any of the page content.
 
-Please make the LEAST amount of changes possible to the HTML and CSS to achieve this goal. Please also add comments above each change to clearly explain what exactly the change does and how it works. Define any technical terms that you use in the comments in a way that a non-technical person can understand.
+Line-wrapping should be implemented at all zoom levels.
+
+At 300% zoom, the page needs to switch to a single column layout, with the sidebar collapsed into a hamburger menu.
+
+When implementing the hamburger menu, ensure it does not overlap any other sections when it is expanded.
+
+DO NOT make any changes that are unrelated to your task.
+
+### Style Guidelines
+
+Make your code changes as understandable and succinct as possible.
+
+Add comments above each change to clearly explain what exactly the change does and how it works.
+
+Define any technical terms that you use in the comments in a way that a non-technical person can understand.
+
