@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(180deg, #bae3fb 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #c2e6fb 0%, #ffffff 100%);
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: #222;
   margin: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-  color: #d35400;
+  color: #d35400d7;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -18,7 +18,11 @@ a {
 
 main {
   display: grid;
-  grid-template-columns: max-content;
+
+  /* This was set to max-content, but changing it
+  to this is what lets lines break on screen zoom */
+  grid-template-columns: minmax(0, 1fr);
+
   grid-template-rows: repeat(4, max-content);
   gap: 20px;
 }
@@ -41,4 +45,8 @@ section.main-content {
 footer {
   grid-row: 4 / 5;
   grid-column: 1 / 2;
+}
+
+.hidden {
+  display: none;
 }
