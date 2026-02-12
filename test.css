@@ -16,7 +16,7 @@ a {
   color: #2a6f97;
 }
 
-main {
+#primary-main {
   display: grid;
 
   /* This was set to max-content, but changing it
@@ -27,23 +27,28 @@ main {
   gap: 20px;
 }
 
-header {
+#primary-header {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
 }
 
-nav.sidebar {
+#primary-nav-sidebar-button-section {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
 }
 
-section.main-content {
+#primary-nav-sidebar {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
 }
 
-footer {
+#primary-main-content {
   grid-row: 4 / 5;
+  grid-column: 1 / 2;
+}
+
+#primary-footer {
+  grid-row: 5 / 6;
   grid-column: 1 / 2;
 }
 

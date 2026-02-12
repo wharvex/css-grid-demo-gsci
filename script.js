@@ -18,3 +18,6 @@ function removeClass(element, remove) {
     }
     element.className = newClassName;
 }
+
+console.log("Script loaded");
+
