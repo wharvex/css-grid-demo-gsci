@@ -19,5 +19,20 @@ function removeClass(element, remove) {
     element.className = newClassName;
 }
 
-console.log("Script loaded");
+function toggleNav(event) {
+    var sidebar = document.getElementById("primary-nav-sidebar");
+    var toggleButton = event.currentTarget;
+    var isToggleButtonShowingNav = toggleButton.textContent.trim() === "Hide Nav";
+    
+    if (isToggleButtonShowingNav) {
+        addClass(sidebar, "hidden");
+        toggleButton.textContent = "Show Nav";
+    } else {
+        removeClass(sidebar, "hidden");
+        toggleButton.textContent = "Hide Nav";
+    }
+}
 
+console.log("Script loaded");
+var toggleButton = document.getElementById("primary-nav-sidebar-button");
+toggleButton.addEventListener("click", toggleNav);
